@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Air Lion</name>
+            <texture>Liveries/Airlion.png</texture>
+        </livery>
+        <lights>
+            <texture>Liveries/Airlion-light</texture>
+        </lights>
+    </model>
+</sim>
+</PropertyList>

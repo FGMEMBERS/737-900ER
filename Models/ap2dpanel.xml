@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<name>AP Panel</name>
+<background>Aircraft/737-900ER/Models/Instruments/EFB/transparent.png</background>
+<w>800</w>
+<h>40</h>
+
+<instruments>
+
+    <instrument include="apdisplays.xml">
+        <name>aptext</name>
+        <x>400</x>
+        <y>20</y>
+        <w>800</w>
+        <h>40</h>
+    </instrument>
+
+ </instruments>
+
+</PropertyList>

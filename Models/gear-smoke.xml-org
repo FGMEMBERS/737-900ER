@@ -1,0 +1,102 @@
+ <PropertyList>
+  <particlesystem>
+    <name>gear_smoke</name>
+  <texture>smoke.png</texture> 
+    <emissive>false</emissive>
+    <lighting>true</lighting>
+    
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+      <pitch-deg>90</pitch-deg>
+    </offsets>
+    
+    <attach>world</attach>
+    
+    <placer>
+      <type>point</type>
+    </placer>
+    
+    <shooter>
+     <theta-min-deg>84</theta-min-deg>
+      <theta-max-deg>86</theta-max-deg>
+      <phi-min-deg>-1.5</phi-min-deg>
+      <phi-max-deg>1.5</phi-max-deg>
+      <speed>
+        <value>60</value>
+        <spread>0</spread>
+      </speed>
+      <rotspeed>
+        <minx>1</minx>
+        <miny>1</miny>
+        <minz>0</minz>
+        <maxx>5</maxx>
+        <maxy>5</maxy>
+        <maxz>0</maxz>
+      </rotspeed>
+      </shooter>
+    
+    <counter>
+      <pps>
+        <value>60</value>
+        <spread>0</spread>
+      </pps>
+      
+
+      
+    </counter>
+    
+    <align>billboard</align>
+    
+    <particle>
+      <startcolor>
+        <red>
+          <value>0.25</value>
+        </red>
+        <green>
+          <value>0.25</value>
+        </green>
+        <blue>
+          <value>0.25</value>
+        </blue>
+        <alpha>
+          <value>0.0</value>
+        </alpha>
+      </startcolor>
+      
+      <endcolor>
+        <red>
+          <value>1.0</value>
+        </red>
+        <green>
+          <value>1.0</value>
+        </green>
+        <blue>
+          <value>1.0</value>
+        </blue>
+        <alpha>
+          <value>1.0</value>
+        </alpha>
+      </endcolor>
+      <startsize>
+        <value>20000</value>
+      </startsize>
+      <endsize>
+        <value>4000</value>
+      </endsize>
+      <life-sec>
+        <value>1</value>
+      </life-sec>
+      <mass-kg>0.5</mass-kg>
+      <radius-m>0.1</radius-m>
+    </particle>
+    
+    <program>
+      <fluid>air</fluid>
+      <gravity>disabled</gravity>
+      <wind>enabled</wind>
+    </program>
+    
+</particlesystem>
+</PropertyList>

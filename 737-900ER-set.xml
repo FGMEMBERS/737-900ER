@@ -1,0 +1,501 @@
+<PropertyList>
+
+    <sim>
+        <description>Boeing 737-900ER</description>
+        <author>xsaint/Syd Adams/FG Community</author>
+        <status>Alpha</status>
+        <aircraft-version>20100528v1.9</aircraft-version>
+        <flight-model>yasim</flight-model>
+        <aero>737-900ER</aero>
+        <fuel-fraction>0.75</fuel-fraction>
+	
+	<gui>
+			<style>
+			<colors>
+				<splash-screen>
+					<red>0.57</red>
+					<green>0.60</green>
+					<blue>0.60</blue>
+				</splash-screen>
+			</colors>
+			</style>
+		</gui>
+		
+        <startup>
+            <splash-texture>Aircraft/737-900ER/splash.png</splash-texture>
+        </startup>
+
+        <model>
+            <path>Aircraft/737-900ER/Models/737-900ER.xml</path>
+            <livery>
+                <file type="string">BA</file>
+            </livery>
+            <lights>
+                <file type="string">BA</file>
+            </lights>
+        </model>
+
+        <view n="0">
+            <name>Pilot View</name>
+            <type>lookfrom</type>
+            <internal type="bool">true</internal>
+            <config>
+                                
+				<x-offset-m archive="y">-0.4</x-offset-m>
+				<y-offset-m archive="y">-1.48</y-offset-m> 
+				<z-offset-m archive="y">-05.70</z-offset-m> 
+				
+				<pitch-offset-deg archive="y">-8.0</pitch-offset-deg>
+                <limits>
+                    <enabled type="bool">true</enabled>
+                    <left>
+                        <heading-max-deg type="double">140</heading-max-deg>
+                        <x-offset-max-m type="double">0.35</x-offset-max-m>
+                        <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                    </left>
+                    <right>
+                        <heading-max-deg type="double">160</heading-max-deg>
+                        <x-offset-max-m type="double">0.25</x-offset-max-m>
+                        <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                    </right>
+                </limits>
+            </config>
+        </view>
+
+    <view n="100">
+        <name>CoPilot View</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+            <default-pitch-deg type="double">0</default-pitch-deg>
+            <default-heading-deg type="double">0</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <dynamic-view type="bool">true</dynamic-view>
+	    <!-- x/y/z == right/up/back -->
+            <x-offset-m archive="y">0.4</x-offset-m>
+	    <y-offset-m archive="y">-1.48</y-offset-m>
+	    <z-offset-m archive="y">-06.10</z-offset-m>
+            <pitch-offset-deg>-13.5</pitch-offset-deg>
+            <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                  <heading-max-deg type="double">140</heading-max-deg>
+                  <x-offset-max-m type="double">0.25</x-offset-max-m>
+                  <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">160</heading-max-deg>
+                    <x-offset-max-m type="double">0.35</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </right>
+            </limits>
+        </config>
+    </view>
+
+<view n="101">
+    <name>Windows View</name>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">66.9</default-field-of-view-deg>
+      <pitch-offset-deg>2</pitch-offset-deg>
+      <heading-offset-deg type="double">213</heading-offset-deg> <!-- parallel to the panel -->
+      <dynamic-view type="bool">false</dynamic-view>
+      <x-offset-m type="double">0.75</x-offset-m>
+      <y-offset-m type="double">-2.00</y-offset-m> <!-- up/down-->
+      <z-offset-m type="double">4.0</z-offset-m> <!-- back -->
+      
+      <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                  <heading-max-deg type="double">5</heading-max-deg>
+                  <x-offset-max-m type="double">0.25</x-offset-max-m>
+                  <x-offset-threshold-deg type="double">15</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">180</heading-max-deg>
+                    <x-offset-max-m type="double">0.35</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </right>
+            </limits>
+    </config>
+    <dynamic>
+      <enabled type="bool" userarchive="y">false</enabled>
+    </dynamic>
+  </view>
+
+  <view n="102">
+    <name>Cabin View</name>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">66.9</default-field-of-view-deg>
+      <pitch-offset-deg>2</pitch-offset-deg>
+      <heading-offset-deg type="double">-180</heading-offset-deg> <!-- parallel to the panel -->
+      <dynamic-view type="bool">false</dynamic-view>
+      <x-offset-m type="double">0.0</x-offset-m>
+      <y-offset-m type="double">-2.00</y-offset-m> <!-- up/down-->
+      <z-offset-m type="double">4.0</z-offset-m> <!-- back -->
+      
+      <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                  <heading-max-deg type="double">180</heading-max-deg>
+                  <x-offset-max-m type="double">0.25</x-offset-max-m>
+                  <x-offset-threshold-deg type="double">15</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">180</heading-max-deg>
+                    <x-offset-max-m type="double">0.35</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </right>
+            </limits>
+    </config>
+    <dynamic>
+      <enabled type="bool" userarchive="y">false</enabled>
+    </dynamic>
+  </view> 
+
+
+<view n="103">
+    <name>LWing View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+      <pitch-offset-deg>-8.0</pitch-offset-deg>
+      <heading-offset-deg type="double">90</heading-offset-deg> 
+      <x-offset-m archive="y"> -2.0 </x-offset-m> 
+      <y-offset-m archive="y"> -2.31 </y-offset-m> 
+      <z-offset-m archive="y"> 11.67 </z-offset-m> 
+    </config>
+  </view>
+
+
+
+
+<view n="104">
+    <name>RWing View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+      <pitch-offset-deg>-8.0</pitch-offset-deg>
+      <heading-offset-deg type="double">-90</heading-offset-deg> 
+      <x-offset-m archive="y">2.0 </x-offset-m> 
+      <y-offset-m archive="y"> -2.31 </y-offset-m> 
+      <z-offset-m archive="y">11.67 </z-offset-m> 
+    </config>
+  </view>
+
+
+
+
+<view n="105">
+    <name>Gear View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">90</default-field-of-view-deg>
+      <pitch-offset-deg>-8.0</pitch-offset-deg>
+      <heading-offset-deg type="double">0</heading-offset-deg> 
+      <x-offset-m archive="y">0.0 </x-offset-m> 
+      <y-offset-m archive="y"> -4.80 </y-offset-m> 
+      <z-offset-m archive="y">17.67 </z-offset-m> 
+    </config>
+  </view>
+
+
+
+    <airport>
+        <runways>
+            <start-offset-m>50</start-offset-m>
+        </runways>
+    </airport>
+
+        <chase-distance-m>-100</chase-distance-m>
+
+        <flaps>
+            <setting>0.000</setting>  <!-- flaps up -->
+            <setting>0.033</setting>  <!-- flaps 1  -->
+            <setting>0.166</setting>  <!-- flaps 5  -->
+            <setting>0.500</setting>  <!-- flaps 15 -->
+            <setting>0.666</setting>  <!-- flaps 20 -->
+            <setting>0.833</setting>  <!-- flaps 25 -->
+            <setting>1.000</setting>  <!-- flaps 30 -->
+        </flaps>
+
+        <systems>
+        <path>Aircraft/737-900ER/Systems/systems.xml</path>
+            <autopilot>
+                <path>Aircraft/737-900ER/Systems/737-autopilotV4.xml</path>
+            </autopilot>
+        </systems>
+
+        <instrumentation>
+            <path>Aircraft/737-900ER/instrumentation.xml</path>
+        </instrumentation>
+
+        <sound>
+            <path>Aircraft/737-900ER/Sounds/777-sound.xml</path>
+            <switch type = "bool">0</switch>
+            <stall-horn type="bool">0</stall-horn>
+        </sound>
+
+        <hud>
+            <enable3d>false</enable3d>
+        </hud>
+
+        <virtual-cockpit archive="y">true</virtual-cockpit>
+        <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+        <help>
+            <title>737-900ER</title>
+            <key>
+                <name>Delete</name>
+                <desc>toggle thrust reversers</desc>
+            </key>
+            <key>
+                <name>Ctrl-b</name>
+                <desc>toggle speed brakes</desc>
+            </key>
+        </help>
+
+        <menubar>
+            <default>
+                <menu n="100">
+                    <label>737-900ER</label>
+                    <enabled type="bool">true</enabled>
+                    <item>
+                        <label>Autostart</label>
+                        <binding>
+                            <command>property-toggle</command>
+                            <property>sim/model/start-idling</property>
+                        </binding>
+                    </item>
+                    <item>
+                        <label>Select Livery</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>aircraft.livery.dialog.toggle()</script>
+                        </binding>
+                    </item>
+                    <item>
+                        <label>EFB</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>b777.EFB.toggle();</script>
+                        </binding>
+                    </item>
+                </menu>
+		
+		
+   <menu n="100">
+   <item n="10">
+    <label>Pushback</label>
+    <name>pushback</name>
+    <binding>
+     <command>dialog-show</command>
+     <dialog-name>pushback</dialog-name>
+    </binding>
+   </item>
+  </menu>
+  
+    
+  <menu n="100">
+   <item n="11">
+    <label>Fire Service</label>
+    <name>fireservice</name>
+    <binding>
+     <command>dialog-show</command>
+     <dialog-name>fireservice</dialog-name>
+    </binding>
+   </item>
+  </menu>
+
+
+		
+            </default>
+        </menubar>
+
+        <weight n="0">
+            <name>Crew</name>
+            <weight-lb>300</weight-lb>
+            <max-lb>400</max-lb>
+            <min-lb>300</min-lb>
+        </weight>
+
+        <weight n="1">
+            <name>Pax</name>
+            <weight-lb>38700</weight-lb>
+            <max-lb>47700</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+
+
+    </sim>
+
+    <consumables>
+        <fuel>
+            <tank n="0"><name>LH Main</name></tank>
+            <tank n="1"><name>Center</name></tank>
+            <tank n="2"><name>RH Main</name></tank>
+        </fuel>
+    </consumables>
+
+
+    <engines>
+    <engine n="0">
+      <rpm>500000</rpm>
+      <reverser-position type="double">0.000000</reverser-position>
+      <running>0</running>
+    </engine>
+    <engine n="1">
+      <rpm>500000</rpm>
+      <reverser-position type="double">0.000000</reverser-position>
+      <running>0</running>
+    </engine>
+  </engines>
+
+     <input>
+    <keyboard>
+      <key n="127">
+        <name>Delete</name>
+        <desc>Toggle Reversers</desc>
+        <binding>
+          <command>nasal</command>
+          <script>reversethrust.togglereverser()</script>
+        </binding>
+      </key>
+    </keyboard>
+  </input>
+
+    <instrumentation>
+        <radar>
+            <switch type="string" archive="y">on</switch>
+            <mode-control type="int" archive="y">1</mode-control>
+            <display-mode>plan</display-mode>
+            <display-controls>
+                <WX type="bool" archive="y">false</WX>
+                <pos type="bool" archive="y">true</pos>
+                <data type="bool" archive="y">true</data>
+                <symbol type="bool" archive="y">true</symbol>
+                <rotate type="bool" archive="y">true</rotate>
+            </display-controls>
+            <serviceable type="bool">true</serviceable>
+            <range type="int" archive="y">10</range>
+            <reference-range-nm type="double" archive="y">640</reference-range-nm>
+            <mode type="string" archive="y">WX</mode>
+            <font>
+                <color>
+                    <red type="float">0.7</red>
+                    <green type="float">0.7</green>
+                    <blue type="float">0.7</blue>
+                    <alpha type="float">1</alpha>
+                </color>
+                <name type="string" archive="y">helvetica_bold.txf</name>
+                <size type="float">8</size>
+                <line-spacing type="float">0.2</line-spacing>
+            </font>
+            <lightning type="bool" archive="y">true</lightning>
+            <display-mode type="string" archive="y">arc</display-mode>
+            <radar-texture-path type="string" archive="y">Aircraft/737-900ER/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
+            <echo-texture-path type="string" archive="y">Aircraft/737-900ER/Models/Instruments/MFD/wxecho.png</echo-texture-path>
+            <minimized type="bool" archive="y">false</minimized>
+            <heading-marker type="bool" archive="y">true</heading-marker>
+            <limit-deg type="int">360</limit-deg>
+        </radar>
+        <groundradar>
+            <id type="string">KSFO</id>
+            <range type="double">1.2</range>
+        </groundradar>
+        <mk-viii>
+            <serviceable>1</serviceable>
+            <speaker>
+                <max-dist>2</max-dist>
+                <reference-dist>1</reference-dist>
+                <volume>0.4</volume>
+            </speaker>
+        </mk-viii>
+        <adf n="1">
+            <serviceable type="bool">1</serviceable>
+            <mode>adf</mode>
+            <frequencies>
+                <selected-khz>341</selected-khz>
+                <standby-khz>379</standby-khz>
+            </frequencies>
+        </adf>
+        <efis>
+            <eicas>
+                <msg n="0">
+                    <text>TESTING TESTING</text>
+                    <red>0.8</red>
+                    <green>0.4</green>
+                    <blue>0.2</blue>
+                    <alpha>0.5</alpha>
+                </msg>
+            </eicas>
+        </efis>
+    </instrumentation>
+
+    <controls>
+        <gear>
+            <brake-parking type="bool">1</brake-parking>
+        </gear>
+    </controls>
+
+    <autopilot>
+        <autobrake>
+            <config>
+                <num-steps type="int">5</num-steps>
+                <rto-step type="int">-2</rto-step>
+                <rto-engage-kts type="double">85</rto-engage-kts>
+                <rto-decel-fts-sec type="double">11</rto-decel-fts-sec>
+                <max-decel-fts-sec type="double">11</max-decel-fts-sec>
+            </config>
+        </autobrake>
+    </autopilot>
+
+    <nasal>
+        <b777>
+            <file>Aircraft/737-900ER/Nasal/Electrical.nas</file>
+            <file>Aircraft/737-900ER/Nasal/flightdirector.nas</file>
+            <file>Aircraft/737-900ER/Nasal/systems.nas</file>
+            <file>Aircraft/737-900ER/Nasal/AFDS.nas</file>
+        </b777>
+	
+	<reversethrust>
+      <file>Aircraft/737-900ER/Nasal/reverse-thrust.nas</file>
+    </reversethrust>
+	
+	
+    </nasal>
+
+</PropertyList>

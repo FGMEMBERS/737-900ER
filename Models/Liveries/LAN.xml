@@ -1,0 +1,1 @@
+<?xml version="1.0"?><PropertyList><sim>    <model>        <livery>            <name type="string">LAN Airlines</name>            <texture>Liveries/LAN-livery.png</texture>        </livery>        <lights>				<texture>Liveries/LAN-lights.png</texture>        </lights>    </model></sim></PropertyList>

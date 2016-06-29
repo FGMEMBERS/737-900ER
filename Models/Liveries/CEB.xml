@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Cebu Pacific</name>
+            <texture>Liveries/CEB.png</texture>
+        </livery>
+        <lights>
+            <texture>Liveries/CEB-lights.png</texture>
+        </lights>
+    </model>
+</sim>
+</PropertyList>

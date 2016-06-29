@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">SpiceJet</name>
+            <texture>Liveries/SEJ.png</texture>
+        </livery>
+        <lights>
+            <texture>Liveries/SEJ-lights.png</texture>
+        </lights>
+    </model>
+</sim>
+</PropertyList>

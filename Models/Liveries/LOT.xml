@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">LOT Airlines</name>
+            <texture>Liveries/LOT.png</texture>
+        </livery>
+        <lights>
+            <texture>Liveries/LOT-light.png</texture>
+        </lights>
+    </model>
+</sim>
+</PropertyList>
